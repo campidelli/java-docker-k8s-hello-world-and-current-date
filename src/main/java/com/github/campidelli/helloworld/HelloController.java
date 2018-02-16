@@ -1,4 +1,4 @@
-package package com.github.campidelli.helloworld;
+package com.github.campidelli.helloworld;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
