@@ -1,1 +1,2 @@
 target/
+kubernetes_deployment.yaml

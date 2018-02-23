@@ -8,8 +8,8 @@ echo "Get current project version and replace it inside the build manifest file"
 VERSION=$(grep -Po -m 1 '<version>\K[^<]*' pom.xml)
 echo "Project version: $(echo $VERSION)"
 
-cp deploy_manifest.yaml.template deploy_manifest.yaml
-sed -i -- "s/<VERSION>/$(echo $VERSION)/g" deploy_manifest.yaml
+cp kubernetes_deployment.yaml.template kubernetes_deployment.yaml
+sed -i -- "s/<VERSION>/$(echo $VERSION)/g" kubernetes_deployment.yaml
 
 echo "Pulling Docker Java8 base image"
 docker pull openjdk:8-jdk-alpine
