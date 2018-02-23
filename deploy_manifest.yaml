@@ -1,0 +1,20 @@
+version: 1.0                                                # Version of YAML manifest language - Defaults to 1.0 standard manifest
+                                                            # for future proofness of manifest YAML language
+Deployment:
+  Services:                                                 # List of all docker containerized microservices provided by this source repository
+      hello-world:                                          # Example Service in the project, This must be the same as the name of the
+                                                            # docker container image produced by build.sh.
+        description: Spring Boot Hello World                # Brief description of this microservice's purpose
+        httpPort: 8080                                      # Process listen port for HTTP protocol this microservice exposes
+        httpProtocol: http                                  # Default is https, Valid options are http/https
+        healthCheckPath: /health                            # "/messageml-renderer" is the group and "messageml-renderer" is the service name.
+        servicePrefix: /hello-world                         # Service path prefix rouated to this microservice via API gateway
+        tenancy: single                                     # "single" means a single instance per tenant (ala all 1.x code)
+                                                            # "multi" means a running instance is able to handle multiple tenant requests in parallel
+        managementPort: 9999                                # This port is the listening remote management port (e.g. JMX)
+                                                            # The deployment tooling will map this port to a random port on the container host
+                                                            # and the tooling will enable a developer to query for running instances management hosts/ports
+        debugPort: 9998                                     # If deployed in debug mode, this port is the listening remote debug port (e.g. JDB)
+                                                            # The deployment tooling (in debug mode) will map this port to a random port on the container host
+                                                            # and the tooling will enable a developer to query for running instances management hosts/ports
+        version: 0.1.1

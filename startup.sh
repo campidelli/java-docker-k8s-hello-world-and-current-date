@@ -66,7 +66,7 @@ function main() {
 }
 
 echo
-echo "Symphony PresentationML Live Renderer Tool Application Instance"
+echo "Hello World Example"
 echo "------------------------------------"
 echo
 echo "starting..."
