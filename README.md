@@ -29,6 +29,6 @@ they are named YOUR_NAME and YOUR_SURNAME, and they must override these properti
 6. Run ```./k8s_build_push_run.sh```, it will build the projects, push their images to a registry, deploy them and create its services.
 
 Once everything is done, and you access ```http://<hello-world-service-external-endpoint>/hello-world``` and you must see
-```Hello Campidelli, Bruno. Today is <curren-date>.```
+```Hello Campidelli, Bruno. Today is <current-date>.```
 
 That is all :)
