@@ -1,2 +1,4 @@
-target/
-kubernetes_deployment.yaml
+hello-world/target/
+hello-world/k8s_deployment.yaml
+current-date/target/
+current-date/k8s_deployment.yaml

@@ -5,10 +5,9 @@ RUN apk add --no-cache bash && \
         /var/cache/*
 
 COPY ./target/hello-world.jar     /opt/symphony/hello-world/hello-world.jar
-COPY ./startup.sh                 /opt/symphony/hello-world/startup.sh
 
 WORKDIR /opt/symphony/hello-world
 
-ENTRYPOINT ["/opt/symphony/hello-world/startup.sh", "run"] 
+ENTRYPOINT ["java", "-jar", "/opt/symphony/hello-world/hello-world.jar"]
 
 EXPOSE 8080

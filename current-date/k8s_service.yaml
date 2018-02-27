@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: current-date-service
+  labels:
+    run: current-date
+spec:
+  selector:
+    run: current-date
+  type: LoadBalancer
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080
