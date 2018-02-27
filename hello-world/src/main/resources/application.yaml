@@ -1,0 +1,5 @@
+your:
+  name: Your Name
+  surname: And Surname
+current-date:
+  endpoint: http://current-date-service/current-date

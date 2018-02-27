@@ -19,3 +19,8 @@ spec:
         ports:
         - containerPort: 8080
           protocol: TCP
+        env:
+        - name: YOUR_NAME
+          value: Bruno
+        - name: YOUR_SURNAME
+          value: Campidelli
